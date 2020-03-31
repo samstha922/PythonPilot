@@ -1,4 +1,4 @@
-Readme notes for Python and Pycharm
+Readme notes for Python and NumPy
 ----------------------------------
 This is just a practice pilot project for studying Python and Pycharm
 
