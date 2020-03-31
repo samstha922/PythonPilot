@@ -1,78 +1,55 @@
-# #----modules (similar to templates in c) reusing fxn in different file
-# # importing the file
-# import second_module
-# import random
-# #second_module file ko fish fxn
-# second_module.fish()
-# # random number
-# x= random.randrange(1,1000)
-# print(x)
+# Python module index
+# import first as f
+# f.roll_a_dice(10)
+# import calendar
+# day=calendar.firstweekday()
+# print('day'+str(day))
+# # f.print_name("Sam")
 
+# from student import Student
+# student1 = Student("Jim","B.Tech",3.1, True)
+# student2 = Student("Sam","B.B.A", 5, False)
+# print(student2.major)
 
-# # --------importing package from web
-# import random
-# import urllib.request
+# from student import Student
+# student1 = Student("Ram","BBA", 3.6, True)
+# student2 = Student("Shyam", "BSW", 3.1, False)
+# bool = student1.on_honor_role()
+# if(bool == True):
+#     print("On honor role")
+# else:
+#     print("Not on honor role")
+
+# from Question import Question
+# question_prompts = [
+#     "What color is apple?",
+#     "WHat color is banana?",
+#     "WHat color is strawberry?"
+# ]
 #
-# def download_web_image(url):
-#     name=random.randrange(1,2000)
-#     full_name=str(name) + ".jpg"
-#     urllib.request.urlretrieve(url,full_name)
+# questions = [
+#     Question(question_prompts[0], "red"),
+#     Question(question_prompts[1], "yellow"),
+#     Question(question_prompts[2], "red")
+# ]
 #
+# def run_test(questions):
+#     score = 0
+#     for q in questions:
+#         x = str(input(q.prompt))
+#         if (x == q.answer):
+#             score += 1
+#     print("Your final score is "+str(score)+ " out of " + str(len(questions)))
 #
-# download_web_image("https://www.google.com.au/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png")
+# run_test(questions)
 
+# --------Inheritance---------------
+from student import *
+# student1 = Student("Sam","BGA",,True)
+# print(student1.on_honor_role())
+teacher1 = Teacher('Sam',"BBA", "2.4", True)
+print(teacher1.on_honor_role())
 
-# # ---------read and write files
-# fw = open('sample.txt','w')
-# fw.write('writing some stuff in text file\n I am stuffed')
-# fw.write('I like bacon')
-# fw.close()
-#
-# fr=open("sample.txt","r")
-# text= fr.read()
-# print (text)
-# fr.close()
-
-
-
-# #downloading files from web
-#
-# from urllib import request
-# goog_url="http://samplecsvs.s3.amazonaws.com/SalesJan2009.csv"
-#
-# def data(csv_url):
-#     response= request.urlopen(csv_url)
-#     csv= response.read()
-#     csv_str=str(csv)
-#     lines=csv_str.split("\\n")
-#     dest_url=r"google.com"
-#     fx= open(dest_url,'w')
-#     for line in lines:
-#         fx.write(line + "\n")
-#     fx.close()
-#
-# data(goog_url)
-
-# #---------------checking out infinite loop with true in while
-#
-# while True:  # this is an infinite loop
-#     command = input('Enter command:')
-#     if len(command) == 0:  # no command - try again
-#         continue  # goes to next loop (line 1)
-#     elif command == 'exit':  # user exit
-#         print('Goodbye')
-#         break  # skips to line 10
-#     else:
-#         print(command)
-# print('bye')
-
-# #-------------------list comprehensions
-# lines=['long','semester in last', 'long','last']
-# trulines = [l for l in lines if l.find('last') > -1]
-# print (trulines)
-
-
-# ##-----separator
-# print('one...', 'two...', 'three', sep='***')
-
-
+# print(teacher1.has_class())
+# print(teacher1.on_honor_role())
+'''Class Two'''
